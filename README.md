@@ -1,23 +1,28 @@
 ## **Análise Estatística da Pokédex**
 
-### 1. **Análise de Frequência dos Stats**
-   - **Cálculo das Frequências**:
-     - Calcular **Frequência Absoluta (Fi)**, **Frequência Relativa (fi)** e **Frequência Acumulada (Fai)** para os atributos dos Pokémon, como HP, Attack, Defense, Special Attack, Special Defense, Speed, Peso e Altura.
-   - **Gráficos**:
-     - Criar **Histogramas** para visualizar a distribuição de cada atributo.
-     - Criar **Gráficos de Barras** para visualizar a frequência de cada tipo de Pokémon.
-   - **Questões**:
-     - Qual é o tipo mais comum de Pokémon? E o mais raro?
-     - Qual é o tipo mais comum e raro em cada geração?
-     - Quais são as **combinações de tipos mais raras**? (Ex: Existe a combinação "Rock" e "Ghost"?)
+**( nao faz sentido fazer analise de frequencia dos stats )**
+## 1) Distribuicão de cada atributo (Hp, Atk, Def, Sp Atk, Sp Def) -> histogramas e ou boxplots?
+ -> valores médios, mínimos, máximos e outliers.
 
-### 2. **Correlação dos Stats**
-   - **Análise de Correlação**:
-     - Verificar se existe correlação entre os seguintes pares de atributos:
-       - **Attack** e **Speed**
-       - **HP** e **Special Attack**
-       - **Total Stats** e **Número de Evoluções**
-   - **Matriz de Correlação**:
-     - Criar uma **matriz de correlação** entre todos os stats.
-   - **Gráficos**:
-     - Criar **Gráficos de Dispersão** para visualizar a relação entre os pares de atributos mencionados.
+## 2) Correlação dos Stats
+ -> tipo se +atk, + speed? -> existe correlacao entre sla peso e hp?
+ -> qual tipo + comum? e qual + raro? e de cada geracao?
+ -> quais COMBINACOES de tipos + raros? (existem combinacoes que ainda nem foram usadas tipo sla rock e ghost)
+  -> +hp -sp atk?
+  -> stats total e numero de evolucoes?
+
+## 3) Matriz correlacao e grafico de dispersao !
+
+
+3) Comparação das Gerações
+ -> Como evoluiu os stats dos pokemons? Gen 5 tem mais stats que a Gen 1?
+
+4) Tipo e Stats
+ -> se pokemon steel, +def? os pokemon lutador tem +atk?
+
+5) Distribuicao do Total stats
+ -> achar uns bixao roubado (outliers)
+
+6) Comparar lendario com basico
+
+7) Comparar pokemons que tem 3 estagios com Pokemons 1 estagio / 2 estagios.
