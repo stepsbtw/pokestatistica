@@ -1,0 +1,39 @@
+Análise de Frequencia dos STATS (+peso e altura): Fi, fi, Fai. + Graficos -> histograma/barras, etc
+  -> qual tipo + comum? e qual + raro? e de cada geracao?
+  -> quais COMBINACOES de tipos + raros? (existem combinacoes que ainda nem foram usadas tipo sla rock e ghost)
+
+Correlação dos STATS
+  -> existe relacao entre atk e speed?
+  -> +hp -sp atk?
+  -> stats total e numero de evolucoes?
+
+  -> matriz correlacao e grafico de dispersao
+
+------------
+
+1) Distribuicão de cada atributo (Hp, Atk, Def, Sp Atk, Sp Def) -> histogramas e ou boxplots?
+ -> valores médios, mínimos, máximos e outliers.
+
+2) Matriz correlação dos Stats
+ -> tipo se +atk, + speed? -> existe correlacao entre sla peso e hp?
+
+3) Comparação das Gerações
+ -> Como evoluiu os stats dos pokemons? Gen 5 tem mais stats que a Gen 1?
+
+4) Tipo e Stats
+ -> se pokemon steel, +def? os pokemon lutador tem +atk?
+
+5) Distribuicao do Total stats
+ -> achar uns bixao roubado (outliers)
+
+6) Comparar lendario com basico
+
+7) Comparar pokemons que tem 3 estagios com Pokemons 1 estagio / 2 estagios.
+
+------------
+
+coisas iradas q a gnt podia fazer:
+- Grafico de dispersao 3D -> Cor da bolinha ser o tipo e Tamanho da bolinha ser o Total Stats sla
+- Grafico de RADAR -> tlgd aqueles que é tipo um hexagono e quanto mais o pokemon tiver um stat, a pontinha vai aumentando (so pesquisa)
+
+------------
