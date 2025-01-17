@@ -31,6 +31,7 @@ def main():
         # Exibir o gráfico
         plt.tight_layout()
         plt.show()
+        plt.savefig(f'imgs/{col.upper()}_hist.png')
 
    # Gerar histogramas combinados para todas as estatísticas
     df[stats].hist(bins=n_class, color='skyblue', edgecolor='black', figsize=(12, 8), alpha=0.8)
