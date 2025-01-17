@@ -57,6 +57,7 @@ plt.xlabel('Quantidade')
 plt.ylabel('Tipo Primário')
 plt.title('Quantidade de Pokémons por Tipo Primário')
 plt.show()
+plt.savefig('imgs/QTprimario_barrahorz.png')
 
 # Gráfico para Tipo Secundário
 plt.barh(
@@ -68,3 +69,4 @@ plt.xlabel('Quantidade')
 plt.ylabel('Tipo Secundário')
 plt.title('Quantidade de Pokémons por Tipo Secundário')
 plt.show()
+plt.savefig('imgs/QTsecundario_barrahorz.png')
