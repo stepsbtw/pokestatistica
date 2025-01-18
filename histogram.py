@@ -26,18 +26,22 @@ def main():
         # Personalizar o gráfico
         plt.xticks(fontsize=12)
         plt.yticks(fontsize=12)
-        plt.grid(axis='y', linestyle='--', alpha=0.7)
+        #plt.grid(axis='y', linestyle='--', alpha=0.7)
+        plt.grid(False)
         
         # Exibir o gráfico
         plt.tight_layout()
-        plt.show()
         plt.savefig(f'imgs/{col.upper()}_hist.png')
+        plt.show()
+        
 
    # Gerar histogramas combinados para todas as estatísticas
     df[stats].hist(bins=n_class, color='skyblue', edgecolor='black', figsize=(12, 8), alpha=0.8)
     plt.suptitle('Histograms of All Stats', fontsize=18)
     plt.tight_layout(rect=[0, 0, 1, 0.96])  # Ajustar espaço para o título
+    plt.savefig(f'imgs/all_STATS_hists.png')
     plt.show()
+    
     
 if __name__ == "__main__":
     main()

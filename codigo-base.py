@@ -41,14 +41,19 @@ for i in range(802):
     if i+1 > gen_limites[k-1]:
         k += 1
     gens.append(k)
+
 #print(gens)
 #print(gens[151])
+
+for i in range(802,1061):
+   gens.append(0) # nao sei qual é a gen!
+
 pkmn['gen'] = gens
-print(pkmn['gen'])
 
 # ATUALIZANDO AS COLUNAS
 pkmn['height'] = nova_altura
 pkmn['weight'] = novo_peso
+
 
 # SALVANDO O NOVO CSV
 pkmn.to_csv('dataset/pokemon_atualizado.csv', index=False)
