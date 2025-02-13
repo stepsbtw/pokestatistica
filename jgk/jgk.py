@@ -2,8 +2,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-df = pd.read_csv('dataset/pokemon.csv')
-df = df.drop(columns=['id','ability1','ability2','abilityH','percent-male','percent-female','egg-group1','egg-group2','class','dex1','dex2'])
+df = pd.read_csv('dataset/pokemon_atualizado.csv')
 
 stats = ['hp', 'attack', 'defense', 'spattack', 'spdefense', 'speed', 'total']
 
@@ -48,6 +47,7 @@ type_colors = {
 
 
 # Gráfico para Tipo Primário
+plt.figure(figsize=(10,8))
 plt.barh(
     tipo1_Fi.index,
     tipo1_Fi.values,
@@ -61,6 +61,7 @@ plt.show()
 
 
 # Gráfico para Tipo Secundário
+plt.figure(figsize=(10,8))
 plt.barh(
     tipo2_Fi.index,
     tipo2_Fi.values,

@@ -5,37 +5,40 @@ import matplotlib.pyplot as plt
 import math
 
 df = pd.read_csv('dataset/pokemon_atualizado.csv')
+'''
 
-
-pos_evol = [' ']*802
+pos_evol = [' ']*1061
 #print(pos_evol)
 #df['pos-evolution'] = pos_evol
-pkmn = df[['id','species','pre-evolution']]
+pkmn = df[['id','species','forme','pre-evolution']]
 
 
 indice = 0
 for i in pkmn['id']:
+    print(i)
     p = pkmn[pkmn['id'] == i]
     #print(p['pre-evolution'])
     if type(p['pre-evolution'][indice]) == str:
         print("===========")
         #print(p)
         index_pre = pkmn[pkmn['species'] == p['pre-evolution'][indice]]['id']
+        if index_pre.empty:
+            index_pre = pkmn[pkmn['forme'] == p['pre-evolution'][indice]]['id']
         id_pre = index_pre.values[0] 
-        #print(f"pre-evolução: {id_pre}")
-        
+        print(f"pre-evolução: {id_pre}")
+    
         if pos_evol[id_pre - 1] != ' ':
             pos_evol[id_pre - 1] += '/'
-            pos_evol[id_pre - 1] += p['species'].values[0]
+            pos_evol[id_pre - 1] += p['forme'].values[0]
             
         else:
-            pos_evol[id_pre - 1] = p['species'].values[0]
+            pos_evol[id_pre - 1] = p['forme'].values[0]
         #print(pos_evol[id_pre - 1])
     indice += 1
 print(pos_evol)
 df['post-evolution'] = pos_evol
 df.to_csv('dataset/pokemon_atualizado.csv', index=False)
-
+'''
 
 pkmn1= df[['weight','speed','gen','post-evolution']]
 pkmn2= df[['weight','speed','gen']]

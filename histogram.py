@@ -6,7 +6,7 @@ from functions import sturges_rule
 
 
 def main():
-    df = pd.read_csv('dataset/pokemon.csv')
+    df = pd.read_csv('dataset/pokemon_atualizado.csv')
     df = df.drop(columns=['id','ability1','ability2','abilityH','percent-male','percent-female','egg-group1','egg-group2','class','dex1','dex2'])
 
     stats = ['hp', 'attack', 'defense', 'spattack', 'spdefense', 'speed', 'total']
@@ -40,7 +40,9 @@ def main():
     plt.suptitle('Histograms of All Stats', fontsize=18)
     plt.tight_layout(rect=[0, 0, 1, 0.96])  # Ajustar espaço para o título
     plt.savefig(f'imgs/all_STATS_hists.png')
-    plt.show()
+    #plt.show()
+
+    df.to_csv("dataset/pokemon_atualizado.csv")
     
     
 if __name__ == "__main__":
