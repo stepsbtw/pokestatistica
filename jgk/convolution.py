@@ -9,42 +9,32 @@ def main():
 
     stats = ['hp', 'attack', 'defense', 'spattack', 'spdefense', 'speed']
     
-    # Número de classes usando a regra de Sturges
+    # Número de bins usando a regra de Sturges
     n_class = sturges_rule(len(df))
     
-    convoluted_distribution = None
-    bin_edges = None
-    
+    # Criar lista de distribuições individuais
+    distributions = []
     for col in stats:
-        hist, bins = np.histogram(df[col], bins=n_class, density=True)
-        
-        # Normalizando para frequência relativa
-        hist = hist / hist.sum()
-        
-        if convoluted_distribution is None:
-            convoluted_distribution = hist
-            bin_edges = bins[:-1]
-        else:
-            convoluted_distribution = np.convolve(convoluted_distribution, hist, mode='same')
-        
-        # Plotar histograma individual
-        plt.figure()
-        plt.bar(bins[:-1], hist, width=np.diff(bins), color='skyblue', edgecolor='black', align='edge')
-        plt.title(f'Histogram of {col.capitalize()} (Relative Frequency)', fontsize=16)
-        plt.xlabel(col.upper(), fontsize=14)
-        plt.ylabel('Relative Frequency', fontsize=14)
-        plt.xticks(fontsize=12)
-        plt.yticks(fontsize=12)
-        plt.grid(False)
-        plt.tight_layout()
-        plt.savefig(f'imgs/{col.upper()}_hist.png')
-        plt.show()
+        hist, bin_edges = np.histogram(df[col], bins=n_class, density=True)
+        hist = hist / hist.sum()  # Normalizando para frequência relativa
+        distributions.append(hist)
+    
+    # Inicializar a convolução com a primeira distribuição
+    convoluted_distribution = distributions[0]
+    for dist in distributions[1:]:
+        convoluted_distribution = np.convolve(convoluted_distribution, dist, mode='full')
+    
+    print(df[stats].sum(axis=1))
+    # Ajustar eixo X corretamente
+    min_sum = df[stats].sum(axis=1).min()
+    max_sum = df[stats].sum(axis=1).max()
+    new_bin_edges = np.arange(min_sum, max_sum + 1)
     
     # Visualizar a convolução de todas as distribuições como gráfico de barras
-    plt.figure()
-    plt.bar(bin_edges, convoluted_distribution, width=np.diff(bin_edges).mean(), color='red', edgecolor='black', align='edge')
+    plt.figure(figsize=(10, 6))
+    plt.bar(new_bin_edges[:len(convoluted_distribution)], convoluted_distribution, width=1, color='red', edgecolor='black', align='center')
     plt.title('Convolution of All Stat Distributions', fontsize=16)
-    plt.xlabel('Stat Value', fontsize=14)
+    plt.xlabel('Sum of Stats', fontsize=14)
     plt.ylabel('Convoluted Frequency', fontsize=14)
     plt.xticks(fontsize=12)
     plt.yticks(fontsize=12)
