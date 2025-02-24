@@ -27,3 +27,9 @@ A base utilizada foi extraída do [Kaggle](https://www.kaggle.com/datasets/myles
 - Ryan Filipe de Mendonça Borges  
 - Daniel Salvador Motta  
 - João Guilherme de Oliveira Ribeiro Kongevold  
+
+## 📄 Artigo Completo  
+
+Para mais detalhes sobre nossa análise, consulte o artigo completo:  
+
+[📥 POKESTATÍSTICA - Análise da Pokédex](docs/POKESTATISTICA.pdf)
