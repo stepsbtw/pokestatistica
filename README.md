@@ -1,28 +1,29 @@
-## **Análise Estatística da Pokédex**
+# PokéStatística - Análise Exploratória da Pokédex  
 
-**( nao faz sentido fazer analise de frequencia dos stats )**
-## 1) Distribuicão de cada atributo (Hp, Atk, Def, Sp Atk, Sp Def) -> histogramas e ou boxplots?
- -> valores médios, mínimos, máximos e outliers.
+## 📌 Sobre o Projeto  
+PokéStatística é um projeto de análise exploratória de dados da Pokédex, focado na identificação de padrões, correlações e tendências nos tipos e atributos dos Pokémon. Utilizando estatística descritiva e visualização de dados, investigamos o balanceamento do jogo, a distribuição de tipos e a influência dos atributos nas batalhas.
 
-## 2) Correlação dos Stats
- -> tipo se +atk, + speed? -> existe correlacao entre sla peso e hp?
- -> qual tipo + comum? e qual + raro? e de cada geracao?
- -> quais COMBINACOES de tipos + raros? (existem combinacoes que ainda nem foram usadas tipo sla rock e ghost)
-  -> +hp -sp atk?
-  -> stats total e numero de evolucoes?
+## 🔍 Objetivos  
+- Comparar a distribuição de atributos entre os Pokémon.  
+- Identificar correlações entre tipos e atributos.  
+- Analisar a frequência e raridade de certos tipos e combinações.  
+- Explorar padrões estatísticos por geração.  
+- Criar modelos para otimização de equipes competitivas.  
 
-## 3) Matriz correlacao e grafico de dispersao !
------------------------------------------------------------
+## 🗂 Base de Dados  
+A base utilizada foi extraída do [Kaggle](https://www.kaggle.com/datasets/mylesoneill/pokemon-sun-and-moon-gen-7-stats/data) e contém 1061 registros e 26 colunas, representando diferentes formas dos Pokémon até a 7ª geração.
 
-- Comparação das Gerações
- -> Como evoluiu os stats dos pokemons? Gen 5 tem mais stats que a Gen 1?
+## ⚙️ Métodos Utilizados  
+- **Tratamento de Dados:** Conversão de unidades, criação de colunas auxiliares (geração, pós-evolução).  
+- **Análise Estatística:** Histogramas, boxplots, medidas descritivas e correlações.  
+- **Visualização de Dados:** Gráficos para distribuição de atributos e combinações de tipos.  
 
-- Tipo e Stats
- -> se pokemon steel, +def? os pokemon lutador tem +atk?
+## 📈 Próximos Passos  
+- **PokéOtimizador:** Modelagem matemática e Programação linear para otimizar a criação dos melhores times competitivos de Pokémon.  
 
-- Distribuicao do Total stats
- -> achar uns bixao roubado (outliers)
-
-- Comparar lendario com basico
-
-- Comparar pokemons que tem 3 estagios com Pokemons 1 estagio / 2 estagios.
+## 🧑‍💻 Equipe  
+- Caio Passos Torkst Ferreira  
+- Vitor Neves dos Santos  
+- Ryan Filipe de Mendonça Borges  
+- Daniel Salvador Motta  
+- João Guilherme de Oliveira Ribeiro Kongevold  
